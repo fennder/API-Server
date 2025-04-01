@@ -3,9 +3,9 @@
 ## Abrir conta na Atlas
 # Serviço de cloud para banco de dados
 
-```
-https://www.mongodb.com/products/platform/atlas-database
-```
+
+<a href="https://www.mongodb.com/products/platform/atlas-database">https://www.mongodb.com/products/platform/atlas-database</a>
+
 
 ## Abrir sua pasta e desejada
 
