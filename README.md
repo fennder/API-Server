@@ -24,3 +24,16 @@ $ touch server.js
 ```
 $ npm i express
 ```
+
+## Criar o arquivo gitignore
+
+```
+$ touch .gitignore
+```
+
+# .gitignore
+
+```
+/node_modules
+package-lock.json
+```
