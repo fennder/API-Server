@@ -37,3 +37,21 @@ $ touch .gitignore
 /node_modules
 package-lock.json
 ```
+
+### Vamos para o código
+
+```
+/server.js
+
+import express from 'express';
+
+const app = express();
+app.use(express.json());
+```
+
+## Rodar o servidor com reload
+
+```
+$ node --watch server.js
+```
+
