@@ -55,3 +55,17 @@ app.use(express.json());
 $ node --watch server.js
 ```
 
+### Configurando o bando de dados
+
+## Acesse o site 
+
+<a href="https://www.prisma.io/docs/getting-started">Prisma.io</a>
+
+# Instalar o Prisma
+
+```
+npm install prisma --save-dev
+
+npx prisma init
+```
+
