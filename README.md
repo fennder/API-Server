@@ -69,3 +69,24 @@ npm install prisma --save-dev
 npx prisma init
 ```
 
+# Roda comando para informar a criação da tabela User
+
+```
+npx prisma db push
+```
+
+# Instalando Prisma Client
+
+```
+npm install @prisma/client
+```
+
+### Rodar Studio do MongoDB
+
+## Abrir SGBD
+
+```
+npx prisma studio
+```
+
+
