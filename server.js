@@ -21,8 +21,21 @@ app.post('/users', async (req, res) => {
 
 app.get('/users', async (req, res) => {
     
-    const users = await prisma.user.findMany();
-    res.status(200).json(users);
+    let users = [];
+
+    if (req.query) { 
+        users = await prisma.user.findMany({
+            where: {
+                name: req.query.name
+            }
+        })
+        return res.status(200).json(user);
+    }else{
+
+        const users = await prisma.user.findMany();
+        res.status(200).json(users);
+    }
+
 });
 
 app.put('/users/:id', async (req, res) => {
@@ -57,6 +70,6 @@ app.listen(4000)
 /* Criar nossa API de usuários
     Criar os Users ok
     Listar os Users ok
-    Editar um User
-    Deletar User
+    Editar um User ok
+    Deletar User ok
 */
