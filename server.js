@@ -25,11 +25,28 @@ app.get('/users', async (req, res) => {
     res.status(200).json(users);
 });
 
+app.put('/users/:id', async (req, res) => {
+    
+    await prisma.user.update({
+        where: {
+            id: req.params.id
+        },
+        data: {
+            name: req.body.name,
+            email: req.body.email,
+            age: req.body.age
+        }
+    })
+
+    res.status(201).json(req.body);
+});
+
+
 app.listen(4000)
 
 /* Criar nossa API de usuários
-    Criar os Users
-    Listar os Users
+    Criar os Users ok
+    Listar os Users ok
     Editar um User
     Deletar User
 */
