@@ -57,7 +57,7 @@ $ node --watch server.js
 
 ### Configurando o bando de dados
 
-## Acesse o site 
+- Acesse o site 
 
 <a href="https://www.prisma.io/docs/getting-started">Prisma.io</a>
 
@@ -83,10 +83,16 @@ npm install @prisma/client
 
 ### Rodar Studio do MongoDB
 
-## Abrir SGBD
+- Abrir SGBD
 
 ```
 npx prisma studio
 ```
 
+## Configurando requisições de outros sites
 
+- Instale o cors
+
+```
+npm install cors
+```

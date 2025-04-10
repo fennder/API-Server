@@ -1,10 +1,12 @@
 import express from 'express';
 import { PrismaClient } from '@prisma/client';
+import cors from 'cors';
 
 const prisma = new PrismaClient();
 
 const app = express();
 app.use(express.json());
+axios.use(cors('http://localhost:5173'));
 
 app.post('/users', async (req, res) => {
     
@@ -26,10 +28,12 @@ app.get('/users', async (req, res) => {
     if (req.query) { 
         users = await prisma.user.findMany({
             where: {
-                name: req.query.name
+                name: req.query.name,
+                email: req.query.email,
+                age: req.query.age
             }
         })
-        return res.status(200).json(user);
+        return res.status(200).json(users);
     }else{
 
         const users = await prisma.user.findMany();
@@ -65,7 +69,7 @@ app.delete('/users/:id', async (req, res) => {
     res.status(200).json({message: "Usuário deletado com sucesso"});
 });
 
-app.listen(4000)
+app.listen(8085)
 
 /* Criar nossa API de usuários
     Criar os Users ok
