@@ -6,7 +6,7 @@ const prisma = new PrismaClient();
 
 const app = express();
 app.use(express.json());
-axios.use(cors('http://localhost:5173'));
+app.use(cors('http://localhost:5173'));
 
 app.post('/users', async (req, res) => {
     
